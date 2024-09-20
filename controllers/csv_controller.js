@@ -44,16 +44,6 @@ module.exports.upload = async function (req, res) {
         } else {
           res.status(400).send('No file uploaded');
         }
-
-        //send response
-        // res.status(200).json({
-        //   message: 'csv file uploaded successfully!',
-        //   data: {
-        //     filename: req.file.originalname,
-        //     header_row: results[0],
-        //     data_rows: results.slice(1),
-        //   },
-        // });
         return res.redirect('/');
       });
   } catch (err) {
